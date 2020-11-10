@@ -11,83 +11,51 @@ namespace MoshUdemy
     {
         static void Main(string[] args)
         {
-            int count = 0;
-            for (int i = 1; i <= 100; i++)
-                if (i % 3 == 0)
-                    count++;
-            Console.WriteLine(count);
+            // 1 
+            Console.WriteLine("Enter number 1-10");
+            int input = Convert.ToByte(Console.ReadLine());
 
-
-            int sum = 0;
-            while (true)
-            {
-                Console.WriteLine("Enter a number or type \'ok\' to exit");
-                var input = Console.ReadLine();
-
-                if (input == "ok")
-                    break;
-                else
-                {
-                    var parsedInput = Int32.Parse(input);
-                    sum += parsedInput;
-                    Console.WriteLine(sum);
-                }
-            }
-
-            Console.WriteLine("Enter a number");
-            var anotherInput = Int32.Parse(Console.ReadLine());
-
-
-            int total = 1;
-            for (int i = 1; i <= anotherInput; i++)
-            {
-                total *= i;
-                Console.WriteLine(i + " " + total);
-            }
-            Console.WriteLine(anotherInput + "! = " + total);
-
-            Random random = new Random();
-
-            var chosenNumber = random.Next(1, 10);
-            var guesses = 4;
-
-            while (guesses > 0)
-            {
-                Console.WriteLine($"Guess number {guesses} tries left");
-                var input = Int32.Parse(Console.ReadLine());
-
-                if (input == chosenNumber)
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Try again");
-                    guesses--;
-                }
-            }
-            if (guesses == 0)
-                Console.WriteLine("You lost");
-
+            if (input > 0 && input < 11)
+                Console.WriteLine("Valid");
             else
-                Console.WriteLine("You won");
+                Console.WriteLine("Invalid");
 
+            // 2
+            Console.WriteLine("Enter 2 numbers separated with a space");
+            string twoNumbers = Console.ReadLine();
+            var twoNumArray = twoNumbers.Split(' ');
 
-            Console.WriteLine("Enter a series of numbers by commas");
-            string numbers = Console.ReadLine();
-            var numbersList = numbers.Split(',');
-            List<int> finalList = new List<int>();
-            foreach (var item in numbersList)
+            if (Convert.ToInt32(twoNumArray[0]) > Convert.ToInt32(twoNumArray[1]))
+                Console.WriteLine(twoNumArray[0]);
+            else
+                Console.WriteLine(twoNumArray[1]);
+
+            // 3
+            Console.WriteLine("Enter the width and height of an image separated with a space");
+            string whinput = Console.ReadLine();
+            var wharray = whinput.Split(' ');
+
+            if (Convert.ToInt32(wharray[0]) > Convert.ToInt32(wharray[1]))
+                Console.WriteLine("Landscape");
+            else Console.WriteLine("Portrait");
+
+            // 4
+            Console.WriteLine("Enter speed limit");
+            int speedLimit = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter speed of the car");
+            int carSpeed = Convert.ToInt32(Console.ReadLine());
+
+            if (carSpeed > speedLimit)
             {
-                int number = Int32.Parse(item);
-                finalList.Add(number);
+                int speedOver = carSpeed - speedLimit;
+                int demeritPoints = speedOver / 5;
+                if (demeritPoints <= 12)
+                    Console.WriteLine(demeritPoints);
+                else Console.WriteLine("License suspended");
             }
-
-            int max = finalList.Max();
-
-            Console.WriteLine(max);
-
-                
+            else Console.WriteLine("Ok");
+ 
 
         }
     }

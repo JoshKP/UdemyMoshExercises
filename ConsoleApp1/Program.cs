@@ -12,137 +12,104 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // 1 Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
-            string input;
-            List<string> names = new List<string>();
-            while (true)
+            // 1 
+            bool isNaming = true;
+            List<string> nameList = new List<string>();
+
+            while (isNaming)
             {
-                Console.WriteLine("Please enter names or press enter");
-                input = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(input))
+                Console.WriteLine("Enter a name");
+                string name = Console.ReadLine();
+
+                if (!string.IsNullOrWhiteSpace(name))
                 {
-                    names.Add(input);
-                    continue;
+                    nameList.Add(name);
                 }
-                break;
+                else
+                {
+                    if (nameList.Count == 0)
+                        isNaming = false;
+                    else if (nameList.Count == 2)
+                        Console.WriteLine(nameList[0] + " and " + nameList[1] + " like your post.");
+                    else if (nameList.Count > 2)
+                        Console.WriteLine(nameList[0] + ", " + nameList[1] + " and " + (nameList.Count - 2) + " others like your post.");
+                }
             }
 
-            if (names.Count == 1)
+
+            // 2 
+            Console.WriteLine("Enter your name");
+            var nameArray = Console.ReadLine().ToArray();
+            var reverseName = nameArray.Reverse();
+
+            foreach (char c in reverseName)
             {
-                Console.WriteLine(names[0] + " likes your post.");
-            }
-            else if (names.Count == 2)
-            {
-                Console.WriteLine(names[0] + " " + names[1] + " likes your post.");
-            }
-            else if (names.Count > 2)
-            {
-                Console.WriteLine($"{names[0]} and {names[1]} and {names.Count - 2} others like your post");
+                Console.WriteLine(c);
             }
 
 
-            // 2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
-
-            Console.WriteLine("What is your name?");
-            string name = Console.ReadLine();
-
-            char[] reverse = name.ToCharArray();
-            Array.Reverse(reverse);
-            string eman = string.Concat(reverse);
-            Console.WriteLine(eman);
-
-
-
-            List<int> numbers = new List<int>();
-            while (true)
+            // 3 
+            int counter = 0;
+            List<int> numberList = new List<int>();
+            while (counter < 5)
             {
                 Console.WriteLine("Enter a number");
-                int userNumber = Int32.Parse(Console.ReadLine());
-                if (!numbers.Contains(userNumber))
+                int userNumber = Convert.ToInt32(Console.ReadLine());
+                if (!numberList.Contains(userNumber))
                 {
-                    numbers.Add(userNumber);
-                    if (numbers.Count == 5)
-                        break;
-                    continue;
+                    numberList.Add(userNumber);
+                    counter++;
                 }
-                Console.WriteLine("Wrong");
             }
-            numbers.Sort();
-            string nickTry = string.Join(", ", numbers);
-            Console.WriteLine(nickTry);
-            Console.ReadLine();
+            numberList.Sort();
+            foreach (int n in numberList)
+            {
+                Console.WriteLine(n);
+            }
 
 
-            List<int> allNumbers = new List<int>();
+            // 4
+            List<int> newNumberList = new List<int>();
 
             while (true)
             {
-                Console.WriteLine("Enter numbers or type \"Quit\"");
-                string moreNumberInput = Console.ReadLine();
-                if (moreNumberInput != "Quit")
-                {
-                    int newNumber = Int32.Parse(moreNumberInput);
-                    allNumbers.Add(newNumber);
-                    continue;
-                }
-                break;
-            }
-            List<int> uniqueNumbers = new List<int>();
-            for (int i = 0; i < allNumbers.Count; i++)
-            {
-                if (!uniqueNumbers.Contains(allNumbers[i]))
-                {
-                    uniqueNumbers.Add(allNumbers[i]);
-                }
-            }
+                Console.WriteLine("Enter numbers or type \"Quit\" to exit");
+                var userInput = Console.ReadLine();
 
-            string anotherNewList = string.Join(", ", uniqueNumbers);
-            Console.WriteLine(anotherNewList);
-
-            while (true)
-            {
-                Console.WriteLine("Enter a list of comma separated numbers");
-                string userList = Console.ReadLine();
-                if (userList != null)
+                if (userInput.ToLower() == "quit")
                 {
-
-                    var newUserList = userList.Split(',').ToList();
-                    if (newUserList.Count >= 5)
+                    foreach (int n in newNumberList)
                     {
-                        newUserList.Sort();
-                        Console.WriteLine($"{newUserList[0]}, {newUserList[1]}, {newUserList[2]}");
-                        break;
+                        Console.WriteLine(n);
+                    }
+                    break;
+                }
+                else
+                {
+                    int number = Convert.ToInt32(userInput);
+                    if (!newNumberList.Contains(number))
+                    {
+                        newNumberList.Add(number);
                     }
                 }
-                Console.WriteLine("Invalid List");
+
+
+
+
+                
+
             }
-
-            Console.ReadLine();
-
-
-
-
-
-
-
-            Console.ReadLine();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
 
         }
+
+
+
+
+
+
+
+
     }
 }
+
