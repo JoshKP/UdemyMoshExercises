@@ -24,6 +24,7 @@ namespace I_2ClassesEx2
 
             Console.WriteLine(post.Votes);
 
+
         }
     }
 }

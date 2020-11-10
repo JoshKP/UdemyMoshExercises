@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace IntermediateClasses
 {
-    public class Stopwatch
+    public static class Stopwatch
     {
-        public Stopwatch() { }
-        
-        public DateTime StartTime { get; set; }
+        public static DateTime StartTime { get; private set; }
 
-        public DateTime EndTime { get; set; }
+        public static bool IsRunning = false;
 
-        public TimeSpan Duration
+        public static TimeSpan Duration
         {
             get
             {
@@ -25,26 +23,24 @@ namespace IntermediateClasses
             }
         }
 
+        public static void Start()
+        {
+            if (Stopwatch.IsRunning != true)
+            {
+                Stopwatch.IsRunning = true;
+                Stopwatch.StartTime = DateTime.Now;
+                Console.WriteLine("00:00");
+            }
+            else
+                throw new InvalidOperationException("Timer already running.");
+        }
+
+        public static void Stop()
+        {
+            Stopwatch.IsRunning = false;
+            Console.WriteLine(Duration);
+        }
+
     }
-
-    //public Person(DateTime birtdate)
-    //{
-    //    Birthdate = Birthdate;
-    //}
-    //public DateTime Birthdate { get; set; }
-
-    //public int Age
-    //{
-    //    get
-    //    {
-    //        var timeSpan = DateTime.Today - Birthdate;
-    //        var years = timeSpan.Days/365;
-
-    //        return years;
-    //    }
-    //}
-
-
-
 }
 

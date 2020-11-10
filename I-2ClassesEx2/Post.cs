@@ -22,7 +22,7 @@ namespace I_2ClassesEx2
 
         public string Description { get; set; }
 
-        public DateTime DateCreated = DateTime.Now;
+        public DateTime DateCreated { get; private set; } = DateTime.Now;
 
         public int Votes { get; private set; } = 0;
 
@@ -35,7 +35,5 @@ namespace I_2ClassesEx2
         {
             Votes--;
         }
-
-        
     }
 }
