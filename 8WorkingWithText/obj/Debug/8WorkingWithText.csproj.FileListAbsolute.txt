@@ -1,0 +1,7 @@
+C:\EFA Work\DotNetProjects\MoshUdemy\8WorkingWithText\bin\Debug\8WorkingWithText.exe.config
+C:\EFA Work\DotNetProjects\MoshUdemy\8WorkingWithText\bin\Debug\8WorkingWithText.exe
+C:\EFA Work\DotNetProjects\MoshUdemy\8WorkingWithText\bin\Debug\8WorkingWithText.pdb
+C:\EFA Work\DotNetProjects\MoshUdemy\8WorkingWithText\obj\Debug\8WorkingWithText.csproj.CoreCompileInputs.cache
+C:\EFA Work\DotNetProjects\MoshUdemy\8WorkingWithText\obj\Debug\8WorkingWithText.exe
+C:\EFA Work\DotNetProjects\MoshUdemy\8WorkingWithText\obj\Debug\8WorkingWithText.pdb
+C:\EFA Work\DotNetProjects\MoshUdemy\8WorkingWithText\obj\Debug\8WorkingWithText.csprojAssemblyReference.cache

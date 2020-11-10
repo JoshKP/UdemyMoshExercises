@@ -1,0 +1,7 @@
+C:\EFA Work\DotNetProjects\MoshUdemy\IntermediateClasses\bin\Debug\IntermediateClasses.exe.config
+C:\EFA Work\DotNetProjects\MoshUdemy\IntermediateClasses\bin\Debug\IntermediateClasses.exe
+C:\EFA Work\DotNetProjects\MoshUdemy\IntermediateClasses\bin\Debug\IntermediateClasses.pdb
+C:\EFA Work\DotNetProjects\MoshUdemy\IntermediateClasses\obj\Debug\IntermediateClasses.csprojAssemblyReference.cache
+C:\EFA Work\DotNetProjects\MoshUdemy\IntermediateClasses\obj\Debug\IntermediateClasses.csproj.CoreCompileInputs.cache
+C:\EFA Work\DotNetProjects\MoshUdemy\IntermediateClasses\obj\Debug\IntermediateClasses.exe
+C:\EFA Work\DotNetProjects\MoshUdemy\IntermediateClasses\obj\Debug\IntermediateClasses.pdb
