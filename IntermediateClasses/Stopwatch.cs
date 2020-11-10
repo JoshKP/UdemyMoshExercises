@@ -11,10 +11,7 @@ namespace IntermediateClasses
     public class Stopwatch
     {
         public Stopwatch() { }
-        public Stopwatch(DateTime startTime)
-        {
-            StartTime = startTime;
-        }
+        
         public DateTime StartTime { get; set; }
 
         public DateTime EndTime { get; set; }

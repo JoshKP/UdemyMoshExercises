@@ -1,0 +1,7 @@
+C:\EFA Work\DotNetProjects\MoshUdemy\I-2ClassesEx2\bin\Debug\I-2ClassesEx2.exe.config
+C:\EFA Work\DotNetProjects\MoshUdemy\I-2ClassesEx2\bin\Debug\I-2ClassesEx2.exe
+C:\EFA Work\DotNetProjects\MoshUdemy\I-2ClassesEx2\bin\Debug\I-2ClassesEx2.pdb
+C:\EFA Work\DotNetProjects\MoshUdemy\I-2ClassesEx2\obj\Debug\I-2ClassesEx2.csprojAssemblyReference.cache
+C:\EFA Work\DotNetProjects\MoshUdemy\I-2ClassesEx2\obj\Debug\I-2ClassesEx2.csproj.CoreCompileInputs.cache
+C:\EFA Work\DotNetProjects\MoshUdemy\I-2ClassesEx2\obj\Debug\I-2ClassesEx2.exe
+C:\EFA Work\DotNetProjects\MoshUdemy\I-2ClassesEx2\obj\Debug\I-2ClassesEx2.pdb

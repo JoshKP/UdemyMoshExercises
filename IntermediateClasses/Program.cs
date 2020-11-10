@@ -10,31 +10,39 @@ namespace IntermediateClasses
     {
         static void Main(string[] args)
         {
-            Stopwatch stopwatch = new Stopwatch();
+            bool isRunning = true;
 
-            Console.WriteLine("Press 1 to begin timer");
-            var input = Convert.ToByte(Console.ReadLine());
-
-            if (input == 1)
-                stopwatch.StartTime = DateTime.Now;
-
-            bool run = true;
-
-            while (run)
+            while (isRunning)
             {
-                Console.WriteLine("Press 2 to lap timer or 3 to end timer");
-                var otherInput = Convert.ToByte(Console.ReadLine());
+                Console.WriteLine("Press 1 to begin timer or 5 to quit");
+                var input = Convert.ToByte(Console.ReadLine());
+                Stopwatch stopwatch = new Stopwatch();
 
-                if (otherInput == 2)
+                bool run = true;
+
+                if (input == 1)
+                    stopwatch.StartTime = DateTime.Now;
+                else
                 {
-                    stopwatch.EndTime = DateTime.Now;
-                    Console.WriteLine(stopwatch.Duration);
+                    isRunning = false;
+                    run = false;
                 }
 
-                else if (otherInput == 3)
-                    run = false;
-            }
+                while (run)
+                {
+                    Console.WriteLine("Press 2 to lap timer or 3 to end timer");
+                    var otherInput = Convert.ToByte(Console.ReadLine());
 
+                    if (otherInput == 2)
+                    {
+                        stopwatch.EndTime = DateTime.Now;
+                        Console.WriteLine(stopwatch.Duration);
+                    }
+                    else if (otherInput == 3)
+                        run = false;
+                }
+
+            }
 
 
 

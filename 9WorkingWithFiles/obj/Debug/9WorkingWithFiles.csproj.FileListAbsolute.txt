@@ -1,0 +1,7 @@
+C:\EFA Work\DotNetProjects\MoshUdemy\9WorkingWithFiles\bin\Debug\9WorkingWithFiles.exe.config
+C:\EFA Work\DotNetProjects\MoshUdemy\9WorkingWithFiles\bin\Debug\9WorkingWithFiles.exe
+C:\EFA Work\DotNetProjects\MoshUdemy\9WorkingWithFiles\bin\Debug\9WorkingWithFiles.pdb
+C:\EFA Work\DotNetProjects\MoshUdemy\9WorkingWithFiles\obj\Debug\9WorkingWithFiles.csprojAssemblyReference.cache
+C:\EFA Work\DotNetProjects\MoshUdemy\9WorkingWithFiles\obj\Debug\9WorkingWithFiles.csproj.CoreCompileInputs.cache
+C:\EFA Work\DotNetProjects\MoshUdemy\9WorkingWithFiles\obj\Debug\9WorkingWithFiles.exe
+C:\EFA Work\DotNetProjects\MoshUdemy\9WorkingWithFiles\obj\Debug\9WorkingWithFiles.pdb
